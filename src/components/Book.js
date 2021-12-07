@@ -1,20 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import BookButtons from './BookButtons';
 
-const book = ({ title, author, genre }) => (
+const Book = ({
+  id, title, author, genre,
+}) => (
   <li>
     <p className="book-genre">{genre}</p>
     <p className="book-title">{title}</p>
     <p className="book-author">{author}</p>
-    <button className="book-button" type="button">
-      Remove
-    </button>
-    <button className="book-button" type="button">
-      Edit
-    </button>
-    <button className="book-button book-button-last" type="button">
-      Comments
-    </button>
+    <BookButtons id={id} />
   </li>
 );
 
-export default book;
+Book.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  genre: PropTypes.string.isRequired,
+};
+
+export default Book;
