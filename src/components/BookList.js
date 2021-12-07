@@ -1,27 +1,26 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 
-const demoBooks = [
-  { title: 'The Hunger Games', author: 'Suzzane Collins', genre: 'Action' },
-  { title: 'Dune', author: 'Frank Herbert', genre: 'Sci-Fi' },
-];
-
-const BookList = () => (
-  <>
-    <ul className="book-list">
-      {
-      demoBooks.map((demoBooks) => (
-        <Book
-          key={uuidv4()}
-          title={demoBooks.title}
-          author={demoBooks.author}
-          genre={demoBooks.genre}
-        />
-      ))
-    }
-    </ul>
-  </>
-);
+const BookList = () => {
+  const booksList = useSelector((state) => state.books);
+  return (
+    <div>
+      <ul className="book-list">
+        {
+          booksList.map((bookObj) => (
+            <Book
+              key={bookObj.id}
+              id={bookObj.id}
+              title={bookObj.title}
+              author={bookObj.author}
+              genre={bookObj.genre}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  );
+};
 
 export default BookList;
