@@ -1,7 +1,7 @@
 # Local linters
-.babelrc
-.eslintrc.json
-.stylelintrc.json
+/.babelrc
+/.eslintrc.json
+/.stylelintrc.json
 
 # Logs
 logs
