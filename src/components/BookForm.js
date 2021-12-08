@@ -39,10 +39,6 @@ const BookForm = () => {
       category,
     };
     dispatch(fetchAddBook(newBook));
-    setState(() => ({
-      title: '',
-      category: 'Adventure',
-    }));
   };
   return (
     <div>
