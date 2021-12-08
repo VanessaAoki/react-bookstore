@@ -1,65 +1,64 @@
-import React, { useState } from 'react';
+/* eslint-disable camelcase */
+import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { addBook } from '../redux/books/books';
+import { fetchAddBook } from '../redux/books/books';
 
-const genres = [
+const categories = [
   'Adventure',
   'Action',
   'Graphic Novel',
   'Mystery',
+  'Horror',
   'Fantasy',
   'Romance',
   'Sci-Fi',
+  'Technical',
 ];
 
 const BookForm = () => {
   const dispatch = useDispatch();
-  const createBookAction = bindActionCreators(addBook, dispatch);
+  const [state, setState] = React.useState({
+    title: '',
+    category: 'Adventure',
+  });
 
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [genre, setGenre] = useState('');
-
-  const updateTitle = (e) => setTitle(e.target.value);
-  const updateAuthor = (e) => setAuthor(e.target.value);
-  const updateGenre = (e) => setGenre(e.target.value);
-
-  const addNewBook = (e) => {
-    const id = uuidv4();
-    e.preventDefault();
-    if (title && author) {
-      createBookAction({
-        title,
-        author,
-        genre,
-        id,
-      });
-      setTitle('');
-      setAuthor('');
-      setGenre('');
-    }
+  const handleChange = (e) => {
+    setState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
   };
 
+  const submitBookToStore = () => {
+    const item_id = uuidv4();
+    const { title, category } = state;
+    const newBook = {
+      item_id,
+      title,
+      category,
+    };
+    dispatch(fetchAddBook(newBook));
+  };
   return (
     <div>
-      <h3 className="form-title">Add new Book</h3>
-      <div className="form-container">
+      <h3>Add new Book</h3>
+      <div>
         <form
-          className="book-form"
-          onSubmit={addNewBook}
+          onSubmit={(e) => {
+            e.preventDefault();
+            submitBookToStore();
+          }}
         >
-          <input type="text" value={title} name="title" className="book-title-input" onChange={updateTitle} placeholder="Enter title of book" required />
-          <input type="text" value={author} name="author" className="book-author-input" onChange={updateAuthor} placeholder="Enter author of book" required />
-          <select className="book-genre-input" name="genre" value={genre} onChange={updateGenre}>
+          <input type="text" value={state.title} name="title" onChange={handleChange} placeholder="Enter title of book" required />
+          <select name="category" value={state.category} onChange={handleChange}>
             {
-              genres.map((genre) => (
-                <option key={uuidv4()} value={genre}>{genre}</option>
+              categories.map((category) => (
+                <option key={uuidv4()} value={category}>{category}</option>
               ))
             }
           </select>
-          <button type="submit" className="book-form-button">Add Book</button>
+          <button type="submit">Add Book</button>
         </form>
       </div>
     </div>
