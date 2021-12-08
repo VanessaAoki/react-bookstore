@@ -7,7 +7,7 @@ const Book = ({
   item_id, title, category,
 }) => (
   <li>
-    <p className="book-genre">{category}</p>
+    <p className="book-category">{category}</p>
     <p className="book-title">{title}</p>
     <BookButtons item_id={item_id} />
   </li>
