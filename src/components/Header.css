@@ -1,22 +1,44 @@
 header {
   display: flex;
   justify-content: space-between;
+  gap: 1.56em;
   align-items: center;
-  padding: 0.8em 4em;
-  background-color: var(--orange);
-  color: white;
+  padding: 1rem 3rem;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(224, 224, 224);
 }
 
+nav,
 header ul {
   list-style: none;
   display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+nav h1 {
+  color: #0290ff;
+  font-size: 1.2rem;
 }
 
 header ul li {
   padding: 0 0.5em;
+  color: rgb(145, 145, 145);
+  font-size: 0.813rem;
+  margin-left: 1em;
 }
 
 .active {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.user-icon {
+  color: #0290ff;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 12px;
 }
