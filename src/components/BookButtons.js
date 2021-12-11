@@ -11,13 +11,13 @@ const BookActions = ({ item_id }) => {
   };
   return (
     <div>
-      <button type="button" onClick={() => removeBookFromStore(item_id)}>
+      <button className="book-button" type="button" onClick={() => removeBookFromStore(item_id)}>
         Remove
       </button>
-      <button type="button">
+      <button className="book-button" type="button">
         Edit
       </button>
-      <button type="button">
+      <button className="book-button" type="button">
         Comments
       </button>
     </div>

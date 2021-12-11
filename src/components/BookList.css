@@ -1,0 +1,104 @@
+.book-list > li {
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 1em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-category {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #121212;
+  margin: 2em 0 0.25em 0;
+}
+
+.book-title {
+  font-family: 'Roboto Slab', serif;
+  color: #121212;
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.book-author {
+  font-family: 'Roboto Slab', serif;
+  font-size: 12px;
+  color: grey;
+  margin-bottom: 1em;
+}
+
+.book-button {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  color: #4386bf;
+  font-weight: 300;
+  background-color: inherit;
+  text-transform: capitalize;
+  border-right: 1px solid rgb(224, 224, 224);
+  border-radius: 0;
+  padding-right: 0.7em;
+  margin: 1.5em 0.7em 1.75em 0;
+}
+
+.book-button-last { border: none; }
+
+.completed {
+  display: flex;
+  align-items: center;
+  gap: 0.62em;
+}
+
+.oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #307bbe;
+  border-image-slice: 1;
+  border-radius: 50%;
+}
+
+.percentage {
+  font-size: 2rem;
+  color: #121212;
+}
+
+.percentage-text {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  color: #121212;
+}
+
+.chapter-info {
+  border-left: 1px solid #e8e8e8;
+  padding-left: 3.5rem;
+  padding-right: 4rem;
+}
+
+.current-chapter {
+  opacity: 0.5;
+  font-family: RobotoSlab, serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: #121212;
+  text-transform: uppercase;
+}
+
+.chapter {
+  font-family: RobotoSlab, serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #121212;
+  letter-spacing: -0.4px;
+  margin: 0.4rem 0 1.4rem 0;
+}
+
+.chapter-button {
+  width: 11.5rem;
+  height: 2.063rem;
+  border-radius: 3px;
+  font-family: RobotoSlab, serif;
+  font-size: 0.813rem;
+}

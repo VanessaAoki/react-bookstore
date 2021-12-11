@@ -13,7 +13,30 @@ html {
 }
 
 a:link,
-a:visited { 
-  text-decoration: none; 
-  color: inherit;
+a:visited { text-decoration: none; }
+
+input,
+select {
+  border: 1px solid rgb(224, 224, 224);
+  background-color: #fff;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  color: rgb(185, 185, 185);
+}
+
+button {
+  background-color: #0290ff;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.body-container {
+  width: 90vw;
+  max-width: 1000px;
+  margin: 1rem auto;
+  color: #fafafa;
 }
