@@ -47,23 +47,24 @@ const BookForm = () => {
   };
   return (
     <div>
-      <h3>Add new Book</h3>
-      <div>
+      <h3 className="form-title">Add new Book</h3>
+      <div className="form-container">
         <form
+          className="book-form"
           onSubmit={(e) => {
             e.preventDefault();
             submitBookToStore();
           }}
         >
-          <input type="text" value={state.title} name="title" onChange={handleChange} placeholder="Enter title of book" required />
-          <select name="category" value={state.category} onChange={handleChange}>
+          <input className="book-title-input" type="text" value={state.title} name="title" onChange={handleChange} placeholder="Enter title of book" required />
+          <select className="book-genre-input" name="category" value={state.category} onChange={handleChange}>
             {
               categories.map((category) => (
                 <option key={uuidv4()} value={category}>{category}</option>
               ))
             }
           </select>
-          <button type="submit">Add Book</button>
+          <button type="submit" className="book-form-button">Add Book</button>
         </form>
       </div>
     </div>

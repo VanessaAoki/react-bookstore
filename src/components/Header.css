@@ -18,12 +18,12 @@ header ul {
   font-weight: 400;
 }
 
-nav h1 {
+nav h1 a {
   color: #0290ff;
   font-size: 1.2rem;
 }
 
-header ul li {
+header nav ul li a {
   padding: 0 0.5em;
   color: rgb(145, 145, 145);
   font-size: 0.813rem;

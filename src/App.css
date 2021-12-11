@@ -36,6 +36,7 @@ button {
 
 .body-container {
   width: 90vw;
+  padding: 2em 0 4em 0;
   max-width: 1000px;
   margin: 1rem auto;
   color: #fafafa;

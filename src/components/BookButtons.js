@@ -17,7 +17,7 @@ const BookActions = ({ item_id }) => {
       <button className="book-button" type="button">
         Edit
       </button>
-      <button className="book-button" type="button">
+      <button className="book-button book-button-last" type="button">
         Comments
       </button>
     </div>
