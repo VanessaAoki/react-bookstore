@@ -1,0 +1,30 @@
+.form-title {
+  text-transform: uppercase;
+  color: grey;
+  font-size: 14px;
+  border-top: 1px solid rgb(224, 224, 224);
+  padding: 2em 0 1em 0;
+}
+
+.book-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-title-input {
+  width: 53%;
+}
+
+.book-title-input::placeholder,
+.book-author-input::placeholder {
+  color: rgb(185, 185, 185);
+}
+
+.book-genre-input {
+  width: 25%;
+}
+
+.book-form-button {
+  width: 15%;
+  font-weight: 700;
+}

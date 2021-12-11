@@ -20,8 +20,7 @@
 Bookstore is a website that allows users to display a list of books, add books to that list and delete the selected book.
 
 <p align="center">
-  <!-- <img src="./docs/screenshot.png" alt="screenshot" width="800"> -->
-  screenshots TBA
+  <img src="./docs/Screenshot.png" alt="screenshot" width="800">
 </p>
 
 ## Built With
